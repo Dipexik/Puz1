@@ -7,9 +7,10 @@
   </head>
   <body style="text-align: center">
     <canvas id="unity-canvas" style="width: 1000px; height: 600px; background: #231F20"></canvas>
-var unityI = null;    
+  
 <script src="Build/1.loader.js"></script>
     <script>
+var unityI = null;
       createUnityInstance(document.querySelector("#unity-canvas"), {
 unityI = unityInstance;
         dataUrl: "Build/1.data",
