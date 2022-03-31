@@ -53,19 +53,19 @@
           mobileWarning.style.display = "none";
         }, 5000);
       } else {
-        canvas.style.width = "1100px";
+        canvas.style.width = "900px";
         canvas.style.height = "600px";
       }
       loadingBar.style.display = "block";
 
       var script = document.createElement("script");
-var unityI = null;
-      script.src = loaderUrl;
+var unityI = null;    
+  script.src = loaderUrl;
       script.onload = () => {
         createUnityInstance(canvas, config, (progress) => {
           progressBarFull.style.width = 100 * progress + "%";
         }).then((unityInstance) => {
-unityI = unityInstance;
+ unityI = unityInstance;
           loadingBar.style.display = "none";
           fullscreenButton.onclick = () => {
             unityInstance.SetFullscreen(1);
@@ -121,7 +121,6 @@ unityI = unityInstance;
 
 
     </script>
-
 
 
 
