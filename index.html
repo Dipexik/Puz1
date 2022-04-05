@@ -117,7 +117,7 @@ var unityI = null;
       }
 
       function PostBox(text) {
-vkBridge.send('VKWebAppAddToFavorites').then(data => {
+VK.callMethod('showAllowMessagesFromCommunityBox', 125046774).then(data => {
   console.log(data);
           unityI.SendMessage('VKSDK', 'RewardGetting',JSON.stringify(data.result));})
 }
