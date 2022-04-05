@@ -53,7 +53,7 @@
           mobileWarning.style.display = "none";
         }, 5000);
       } else {
-        canvas.style.width = "1000px";
+        canvas.style.width = "900px";
         canvas.style.height = "600px";
       }
       loadingBar.style.display = "block";
@@ -65,7 +65,7 @@ var unityI = null;
         createUnityInstance(canvas, config, (progress) => {
           progressBarFull.style.width = 100 * progress + "%";
         }).then((unityInstance) => {
-     unityI = unityInstance;
+unityI = unityInstance;
           loadingBar.style.display = "none";
           fullscreenButton.onclick = () => {
             unityInstance.SetFullscreen(1);
@@ -77,10 +77,7 @@ var unityI = null;
       document.body.appendChild(script);
     </script>
 
-
-
-
- <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
+<script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
 
     <script type="text/javascript">
 
@@ -119,17 +116,15 @@ var unityI = null;
       }
 
 
-  function PostBox(text) {
+ function PostBox(text) {
         var photo_num = "photo-66509061_322022519";
 VK.api('wall.post', {message: text,
 attachments : photo_num + ",http://vk.com/app8115733"
 }, function(data) {
-}};
-      
+}
+};
 
     </script>
-
-
 
   </body>
 </html>
