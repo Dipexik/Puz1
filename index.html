@@ -117,11 +117,9 @@ var unityI = null;
       }
 
       function PostBox(text) {
-var photo_num = "b10";
-   VK.api('wall.post', {message: text,
- attachments : photo_num + ",http://vk.com/app1111"
-}, function(data) {
-});
+vkBridge.send('VKWebAppShowWallPostBox', {message:"reward"}).then(data => {
+  console.log(data);
+          unityI.SendMessage('VKSDK', 'RewardGetting',JSON.stringify(data.result));})
 }
 
 
