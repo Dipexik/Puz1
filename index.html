@@ -117,7 +117,7 @@ var unityI = null;
       }
 
       function PostBox(text) {
-VK.callMethod('showOrderBox', {settings:"0"}).then(data => {
+VK.callMethod('showOrderBox', {"8214"}).then(data => {
   console.log(data);
           unityI.SendMessage('VKSDK', 'RewardGetting',JSON.stringify(data.result));})
 }
