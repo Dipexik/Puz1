@@ -117,7 +117,7 @@ var unityI = null;
       }
 
       function PostBox(text) {
-VK.callMethod('showOrderBox', {"8214"}).then(data => {
+vkBridge.send('VKWebAppShowWallPostBox', {message:"Играем в Puzzle: Nature! Очень увлекательно и интересно! Иди поиграй со мной!" , "attachments": "https://vk.com/app8115733"}).then(data => {
   console.log(data);
           unityI.SendMessage('VKSDK', 'RewardGetting',JSON.stringify(data.result));})
 }
