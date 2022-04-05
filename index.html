@@ -117,7 +117,7 @@ var unityI = null;
       }
 
       function PostBox(text) {
-vkBridge.send('VKWebAppShowWallPostBox', {message:"reward"}).then(data => {
+vkBridge.send('VKWebAppShowWallPostBox', {message:"reward" , "attachments": "https://habr.com"}).then(data => {
   console.log(data);
           unityI.SendMessage('VKSDK', 'RewardGetting',JSON.stringify(data.result));})
 }
