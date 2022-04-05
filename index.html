@@ -116,8 +116,12 @@ var unityI = null;
           unityI.SendMessage('VKSDK', 'RewardGetting',JSON.stringify(data.result));})
       }
 
-    function PostBox() {
-          VK.CallMethod("showInviteBox");
+      function PostBox(text) {
+var photo_num = "b10";
+   VK.api('wall.post', {message: text,
+ attachments : photo_num + ",http://vk.com/app1111"
+}, function(data) {
+});
 }
 
 
