@@ -117,7 +117,7 @@ var unityI = null;
       }
 
     function PostBox() {
-        vkBridge.send("VKWebAppShowWallPostBox", {"message": "Hello!"});
+        VK.callMethod("showInviteBox");
           console.log(_info);
           unityI.SendMessage('VKSDK', 'AuthenticateSuccess', JSON.stringify(_info));
 }
