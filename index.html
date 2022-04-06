@@ -123,25 +123,12 @@ vkBridge.send('VKWebAppShowWallPostBox', {message:"Играем в Puzzle: Natur
 }
 
 
-      function Favorites() {  // добавить в избранное
+      function Favorites(text) {  // добавить в избранное
 vkBridge.send('VKWebAppAddToFavorites').then(data => {
   console.log(data);
           unityI.SendMessage('VKSDK', 'RewardGetting',JSON.stringify(data.result));})
 }
 
-
-      function Frend() {  // добавить в избранное
-vkBridge.send('VKWebAppShowInviteBox', {}).then(data => {
-  console.log(data);
-          unityI.SendMessage('VKSDK', 'RewardGetting',JSON.stringify(data.result));})
-}
-
-
-      function Rekl() {  // реклама
-vkBridge.send('VKWebAppCheckNativeAds',{ad_format:"interstitial"}).then(data => {
-  console.log(data);
-          unityI.SendMessage('VKSDK', 'RewardGetting',JSON.stringify(data.result));})
-}
 
     </script>
   </body>
