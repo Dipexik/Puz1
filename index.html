@@ -130,6 +130,13 @@ vkBridge.send('VKWebAppAddToFavorites').then(data => {
 }
 
 
+      function Frend() {  // добавить в избранное
+vkBridge.send('VKWebAppShowInviteBox', {}).then(data => {
+  console.log(data);
+          unityI.SendMessage('VKSDK', 'RewardGetting',JSON.stringify(data.result));})
+}
+
+
     </script>
   </body>
 </html>
