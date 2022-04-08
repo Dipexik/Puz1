@@ -106,8 +106,8 @@ var unityI = null;
       }
 
             function showFullscrenAd(){
- vkBridge.send('VKWebAppCheckNativeAds',{ad_format:"interstitial"}).then(data => {
-console.log(data);});
+ vkBridge.send('VKWebAppShowNativeAds',{ad_format:"interstitial"}).then(data => {
+          console.log(data);});
        
       }
 
